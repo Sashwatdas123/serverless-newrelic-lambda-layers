@@ -18,4 +18,4 @@ jobs:
     uses: newrelic/node-newrelic/.github/workflows/prep-release.yml@main
     with:
       release_type: ${{ github.event.inputs.release_type }}
-      changelog_file: CHANGELOG.md
+      changelog_file: NEWS.md
