@@ -151,6 +151,18 @@ custom:
     trustedAccountKey: your-parent-account-id
 ```
 
+#### `appName` (optional)
+
+Sets the `NEW_RELIC_APP_NAME` environment variable on all instrumented functions. If not set, the plugin defaults to the function's `name` property or the function key from `serverless.yml`.
+
+You can still override this on a per-function basis by setting `NEW_RELIC_APP_NAME` directly in the function's `environment` block — that takes precedence over this config value.
+
+```yaml
+custom:
+  newRelic:
+    appName: 'my-app-name'
+```
+
 #### `debug` (optional)
 
 Whether or not to enable debug mode. Must be a boolean value. This sets the log level to
